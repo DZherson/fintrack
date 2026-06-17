@@ -51,12 +51,12 @@
 | Lenguaje | TypeScript 5 (strict) |
 | Estilos | TailwindCSS + shadcn/ui |
 | ORM | Prisma 5 |
-| Base de datos | PostgreSQL (Supabase) |
+| Base de datos | PostgreSQL (Neon) |
 | Autenticación | NextAuth.js v5 |
 | Gráficos | Recharts |
 | Validación | Zod |
 | Testing | Vitest + React Testing Library |
-| Deploy | Vercel + Supabase |
+| Deploy | Vercel + Neon |
 
 ---
 
@@ -117,6 +117,7 @@ fintrack/
 │   ├── auth.ts                 # Configuración de NextAuth
 │   ├── db.ts                   # Singleton de Prisma Client
 │   ├── calculations.ts         # Lógica de negocio pura (testeable)
+│   ├── locale.ts               # Locale es-MX, moneda MXN, utilidades de formato
 │   ├── validations.ts          # Schemas de Zod
 │   └── utils.ts                # Utilidades (cn)
 ├── hooks/                      # Custom hooks (useToast)
