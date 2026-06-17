@@ -98,12 +98,7 @@ export function calculateSavingProgress(
   return { current, percentage };
 }
 
-export function formatCurrency(amount: number): string {
-  return new Intl.NumberFormat("es-MX", {
-    style: "currency",
-    currency: "MXN",
-  }).format(amount);
-}
+export { formatCurrency } from "@/lib/locale";
 
 export function getDaysRemaining(deadline: Date): number {
   const now = new Date();

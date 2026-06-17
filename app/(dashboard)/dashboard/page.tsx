@@ -1,6 +1,7 @@
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
-import { format, startOfMonth, endOfMonth, subMonths } from "date-fns";
+import { format, startOfMonth, subMonths } from "date-fns";
+import { formatDateEs } from "@/lib/locale";
 import { TransactionType } from "@prisma/client";
 import {
   calculateMonthlyBalance,
@@ -11,7 +12,6 @@ import { BalanceCards } from "@/components/dashboard/balance-card";
 import { MonthlyChart } from "@/components/dashboard/monthly-chart";
 import { CategoryChart } from "@/components/dashboard/category-chart";
 import { RecentTransactions } from "@/components/dashboard/recent-transactions";
-import { Skeleton } from "@/components/ui/skeleton";
 import type { TransactionWithCategory } from "@/types";
 
 export const dynamic = "force-dynamic";
@@ -52,7 +52,7 @@ export default async function DashboardPage() {
       <div>
         <h1 className="text-2xl font-bold">Dashboard</h1>
         <p className="text-muted-foreground">
-          Resumen de {format(now, "MMMM yyyy")}
+          Resumen de {formatDateEs(now, "MMMM yyyy")}
         </p>
       </div>
 
