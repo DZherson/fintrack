@@ -2,7 +2,7 @@
 
 > **Toma el control de tus finanzas personales.** Registra, categoriza y visualiza tus gastos e ingresos en un dashboard limpio e intuitivo.
 
-[![CI](https://github.com/TU_USUARIO/fintrack/actions/workflows/ci.yml/badge.svg)](https://github.com/TU_USUARIO/fintrack/actions/workflows/ci.yml)
+[![CI](https://github.com/DZherson/fintrack/actions/workflows/ci.yml/badge.svg)](https://github.com/TU_USUARIO/fintrack/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 [![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?logo=typescript)](https://www.typescriptlang.org)
