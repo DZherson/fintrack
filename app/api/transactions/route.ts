@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { transactionSchema } from "@/lib/validations";
-import { TransactionType } from "@prisma/client";
+import { Prisma, TransactionType } from "@prisma/client";
 import type { ApiResponse, PaginatedResult, TransactionWithCategory } from "@/types";
 
 export async function GET(request: Request): Promise<NextResponse<ApiResponse<PaginatedResult<TransactionWithCategory>>>> {
@@ -18,7 +18,7 @@ export async function GET(request: Request): Promise<NextResponse<ApiResponse<Pa
     const categoryId = searchParams.get("categoryId");
     const search = searchParams.get("search");
 
-    const where: Parameters<typeof db.transaction.findMany>[0]["where"] = {
+    const where: Prisma.TransactionWhereInput = {
       userId: session.user.id,
     };
 

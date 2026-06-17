@@ -26,7 +26,7 @@ export type CategoryBreakdown = {
   percentage: number;
 };
 
-export type ApiResponse<T = null> = {
+export type ApiResponse<T = unknown> = {
   success: boolean;
   data?: T;
   error?: string;

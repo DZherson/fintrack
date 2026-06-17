@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
-import { TransactionType } from "@prisma/client";
 import type { Category } from "@prisma/client";
 import type { TransactionWithCategory, PaginatedResult } from "@/types";
 import { TransactionFilters } from "@/components/transactions/transaction-filters";
@@ -32,7 +31,6 @@ export default function TransactionsPage() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [isCreating, setIsCreating] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [dialogOpen, setDialogOpen] = useState(false);
 

@@ -65,31 +65,30 @@
 ### Prerrequisitos
 
 - Node.js 20+
-- pnpm (`npm install -g pnpm`)
-- Una base de datos PostgreSQL (local o en [Supabase](https://supabase.com))
+- Una base de datos PostgreSQL (local o en [Neon](https://neon.tech) / [Supabase](https://supabase.com))
 
 ### Pasos
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/TU_USUARIO/fintrack.git
+git clone https://github.com/DZherson/fintrack.git
 cd fintrack
 
 # 2. Instalar dependencias
-pnpm install
+npm install
 
 # 3. Configurar variables de entorno
 cp .env.example .env
 # Editar .env con tus valores reales
 
 # 4. Crear las tablas en la base de datos
-pnpm db:push
+npm run db:push
 
 # 5. (Opcional) Cargar datos de demo
-pnpm db:seed
+npm run db:seed
 
 # 6. Iniciar el servidor de desarrollo
-pnpm dev
+npm run dev
 ```
 
 Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
@@ -137,10 +136,10 @@ fintrack/
 
 ```bash
 # Correr todos los tests una vez
-pnpm test
+npm test
 
 # Modo watch (re-ejecuta al guardar)
-pnpm test:watch
+npm run test:watch
 ```
 
 Los tests cubren:

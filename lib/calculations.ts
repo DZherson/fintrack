@@ -1,4 +1,4 @@
-import { TransactionType } from "@prisma/client";
+import { TransactionType, type Prisma } from "@prisma/client";
 import { subMonths, format, startOfMonth, endOfMonth } from "date-fns";
 import type { TransactionWithCategory, MonthlyBalance, CategoryBreakdown } from "@/types";
 
@@ -90,7 +90,7 @@ export function getDateRangeForMonth(month: string): { start: Date; end: Date } 
 }
 
 export function calculateSavingProgress(
-  contributions: { amount: number | string }[],
+  contributions: { amount: number | string | Prisma.Decimal }[],
   targetAmount: number,
 ): { current: number; percentage: number } {
   const current = contributions.reduce((sum, c) => sum + Number(c.amount), 0);
