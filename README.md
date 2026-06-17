@@ -152,13 +152,13 @@ Los tests cubren:
 
 ## Despliegue
 
-### 1. Base de datos en Supabase
+### 1. Base de datos (Neon o Supabase)
 
-1. Crea un proyecto en [supabase.com](https://supabase.com) (plan free).
-2. Ve a **Project Settings → Database → Connection string → URI**.
-3. Copia la `DATABASE_URL` y agrégala a tu `.env`.
-4. Ejecuta `pnpm db:push` para crear las tablas.
-5. *(Opcional)* Ejecuta `pnpm db:seed` para insertar datos de demo.
+1. Crea un proyecto gratuito en [neon.tech](https://neon.tech) o [supabase.com](https://supabase.com).
+2. Copia la **Connection string (URI)** de los ajustes del proyecto.
+3. Agrégala como `DATABASE_URL` en tu `.env`.
+4. Ejecuta `npm run db:push` para crear las tablas.
+5. *(Opcional)* Ejecuta `npm run db:seed` para insertar datos de demo.
 
 ### 2. App en Vercel
 
@@ -193,5 +193,5 @@ Distribuido bajo la licencia [MIT](./LICENSE).
 
 **David Matu**
 
-- GitHub: [@TU_USUARIO](https://github.com/TU_USUARIO)
-- LinkedIn: [linkedin.com/in/TU_USUARIO](https://linkedin.com/in/TU_USUARIO)
+- GitHub: [@DZherson](https://github.com/DZherson)
+- LinkedIn: [linkedin.com/in/david-matu](https://linkedin.com/in/david-matu)
